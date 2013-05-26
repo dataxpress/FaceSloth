@@ -18,6 +18,8 @@
 		4C2CA01E1751BA150066B379 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA01D1751BA150066B379 /* Default-568h@2x.png */; };
 		4C2CA0211751BA150066B379 /* TGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA0201751BA150066B379 /* TGViewController.m */; };
 		4C2CA0241751BA150066B379 /* TGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0221751BA150066B379 /* TGViewController.xib */; };
+		4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */; };
+		4C2CA0311751BDBE0066B379 /* TGImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		4C2CA01F1751BA150066B379 /* TGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGViewController.h; sourceTree = "<group>"; };
 		4C2CA0201751BA150066B379 /* TGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGViewController.m; sourceTree = "<group>"; };
 		4C2CA0231751BA150066B379 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TGViewController.xib; sourceTree = "<group>"; };
+		4C2CA02D1751BDBE0066B379 /* TGImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageViewerViewController.h; sourceTree = "<group>"; };
+		4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageViewerViewController.m; sourceTree = "<group>"; };
+		4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGImageViewerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				4C2CA0201751BA150066B379 /* TGViewController.m */,
 				4C2CA0221751BA150066B379 /* TGViewController.xib */,
 				4C2CA00E1751BA150066B379 /* Supporting Files */,
+				4C2CA02D1751BDBE0066B379 /* TGImageViewerViewController.h */,
+				4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */,
+				4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */,
 			);
 			path = FaceSloth;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				4C2CA01C1751BA150066B379 /* Default@2x.png in Resources */,
 				4C2CA01E1751BA150066B379 /* Default-568h@2x.png in Resources */,
 				4C2CA0241751BA150066B379 /* TGViewController.xib in Resources */,
+				4C2CA0311751BDBE0066B379 /* TGImageViewerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				4C2CA0141751BA150066B379 /* main.m in Sources */,
 				4C2CA0181751BA150066B379 /* TGAppDelegate.m in Sources */,
 				4C2CA0211751BA150066B379 /* TGViewController.m in Sources */,
+				4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
