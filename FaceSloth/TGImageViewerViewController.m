@@ -91,7 +91,10 @@
 
 - (IBAction)shareFacebookTapped:(id)sender {
     
-    
+    SLComposeViewController* compose = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [compose addImage:self.renderedImage];
+    [self presentViewController:compose animated:YES completion:nil];
+
 }
 
 - (IBAction)shareTwitterTapped:(id)sender
