@@ -11,6 +11,8 @@
 
 @interface TGImageViewerViewController ()
 
+@property (nonatomic, retain) UIImage* renderedImage;
+
 @end
 
 @implementation TGImageViewerViewController
@@ -29,11 +31,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+}
+
+-(void)renderFacesOnImage:(UIImage*)image
+{
+    
     // render the image
     TGSlothRenderer* renderer = [[TGSlothRenderer alloc] init];
     
-    [renderer renderSlothFacesOntoImage:self.image completion:^(UIImage *renderedImage) {
-        self.imageView.image = renderedImage;
+    [renderer renderSlothFacesOntoImage:image completion:^(UIImage *renderedImage) {
+        self.renderedImage = renderedImage;
+        self.imageView.image = self.renderedImage;
     } error:^(NSString *error) {
         
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -42,7 +55,7 @@
     }];
     
     [renderer release];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +68,6 @@
 {
     [_renderedImage release];
     [_imageView release];
-    [_image release];
     [super dealloc];
 
 }

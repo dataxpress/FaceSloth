@@ -10,12 +10,12 @@
 
 @interface TGImageViewerViewController : UIViewController
 
-@property (nonatomic, retain) UIImage* image;
-@property (nonatomic, retain) UIImage* renderedImage;
 
 @property (retain, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)doneTapped:(id)sender;
 - (IBAction)shareFacebookTapped:(id)sender;
 - (IBAction)shareTwitterTapped:(id)sender;
+
+-(void)renderFacesOnImage:(UIImage*)image;
 
 @end

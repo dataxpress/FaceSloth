@@ -69,8 +69,11 @@
         
         TGImageViewerViewController* viewer = [[TGImageViewerViewController alloc] initWithNibName:nil bundle:nil];
         
-        viewer.image = image;
-        [self presentViewController:viewer animated:YES completion:nil];
+
+        [self presentViewController:viewer animated:YES completion:^{
+            [viewer renderFacesOnImage:image];
+        }];
+        
         
         [viewer release];
     
