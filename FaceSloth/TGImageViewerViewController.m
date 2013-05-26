@@ -11,6 +11,7 @@
 
 @interface TGImageViewerViewController ()
 
+@property (nonatomic, retain) UIImage* originalImage;
 @property (nonatomic, retain) UIImage* renderedImage;
 
 @end
@@ -41,21 +42,32 @@
 -(void)renderFacesOnImage:(UIImage*)image
 {
     
+    self.originalImage = image;
+    
+    [self renderOriginal];
+
+}
+
+- (IBAction)redoTapped:(id)sender {
+    [self renderOriginal];
+}
+
+-(void)renderOriginal
+{
+    
     // render the image
     TGSlothRenderer* renderer = [[TGSlothRenderer alloc] init];
     
-    [renderer renderSlothFacesOntoImage:image completion:^(UIImage *renderedImage) {
+    [renderer renderSlothFacesOntoImage:self.originalImage completion:^(UIImage *renderedImage) {
         self.renderedImage = renderedImage;
         self.imageView.image = self.renderedImage;
     } error:^(NSString *error) {
-        
         [self dismissViewControllerAnimated:YES completion:nil];
         [[[[UIAlertView alloc] initWithTitle:@"Error" message:error delegate:nil cancelButtonTitle:@"Oh..." otherButtonTitles:nil] autorelease] show];
         
     }];
     
     [renderer release];
-
 }
 
 - (void)didReceiveMemoryWarning

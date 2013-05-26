@@ -17,5 +17,6 @@
 - (IBAction)shareTwitterTapped:(id)sender;
 
 -(void)renderFacesOnImage:(UIImage*)image;
+- (IBAction)redoTapped:(id)sender;
 
 @end
