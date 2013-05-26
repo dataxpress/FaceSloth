@@ -30,6 +30,8 @@
 		4C2CA0441751C7480066B379 /* slothface3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03F1751C7480066B379 /* slothface3.png */; };
 		4C2CA0451751C7480066B379 /* slothface2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0401751C7480066B379 /* slothface2.png */; };
 		4C2CA0471751C8DD0066B379 /* slothface7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0461751C8DD0066B379 /* slothface7.png */; };
+		4C2CA0491751D2DD0066B379 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0481751D2DD0066B379 /* Social.framework */; };
+		4C2CA04B1751D2F80066B379 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA04A1751D2F80066B379 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		4C2CA03F1751C7480066B379 /* slothface3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface3.png; sourceTree = "<group>"; };
 		4C2CA0401751C7480066B379 /* slothface2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface2.png; sourceTree = "<group>"; };
 		4C2CA0461751C8DD0066B379 /* slothface7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface7.png; sourceTree = "<group>"; };
+		4C2CA0481751D2DD0066B379 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4C2CA04A1751D2F80066B379 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2CA04B1751D2F80066B379 /* Twitter.framework in Frameworks */,
+				4C2CA0491751D2DD0066B379 /* Social.framework in Frameworks */,
 				4C2CA0381751C1D80066B379 /* CoreImage.framework in Frameworks */,
 				4C2CA0361751C1D40066B379 /* QuartzCore.framework in Frameworks */,
 				4C2CA0081751BA150066B379 /* UIKit.framework in Frameworks */,
@@ -84,6 +90,8 @@
 		4C2C9FFB1751BA150066B379 = {
 			isa = PBXGroup;
 			children = (
+				4C2CA04A1751D2F80066B379 /* Twitter.framework */,
+				4C2CA0481751D2DD0066B379 /* Social.framework */,
 				4C2CA0371751C1D80066B379 /* CoreImage.framework */,
 				4C2CA0351751C1D40066B379 /* QuartzCore.framework */,
 				4C2CA00D1751BA150066B379 /* FaceSloth */,

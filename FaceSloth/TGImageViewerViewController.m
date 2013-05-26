@@ -5,9 +5,10 @@
 //  Created by Tim Gostony on 5/25/13.
 //  Copyright (c) 2013 Tim Gostony. All rights reserved.
 //
-
+#import <Social/Social.h>
 #import "TGImageViewerViewController.h"
 #import "TGSlothRenderer.h"
+#import <Twitter/Twitter.h>
 
 @interface TGImageViewerViewController ()
 
@@ -93,8 +94,20 @@
     
 }
 
-- (IBAction)shareTwitterTapped:(id)sender {
+- (IBAction)shareTwitterTapped:(id)sender
+{
+    if([TWTweetComposeViewController canSendTweet] == NO)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please go to Settings to sign into Twitter." delegate:nil cancelButtonTitle:@"I will!" otherButtonTitles:nil] autorelease] show];
+        return;
+    }
     
+    TWTweetComposeViewController* compose = [[TWTweetComposeViewController alloc] init];
+    [compose setInitialText:@"\n\n#slothify"];
+    [compose addImage:self.renderedImage];
+    
+    [self presentViewController:compose animated:YES completion:nil];
+    [compose release];
     
 }
 @end
