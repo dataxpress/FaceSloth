@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TGViewController : UIViewController
+@interface TGViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+- (IBAction)takePictureTapped:(id)sender;
+- (IBAction)choosePictureTapped:(id)sender;
 
 @end
