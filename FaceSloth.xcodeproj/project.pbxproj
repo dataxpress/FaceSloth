@@ -21,6 +21,8 @@
 		4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */; };
 		4C2CA0311751BDBE0066B379 /* TGImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */; };
 		4C2CA0341751BF1C0066B379 /* TGSlothRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */; };
+		4C2CA0361751C1D40066B379 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0351751C1D40066B379 /* QuartzCore.framework */; };
+		4C2CA0381751C1D80066B379 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0371751C1D80066B379 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGImageViewerViewController.xib; sourceTree = "<group>"; };
 		4C2CA0321751BF1C0066B379 /* TGSlothRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSlothRenderer.h; sourceTree = "<group>"; };
 		4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSlothRenderer.m; sourceTree = "<group>"; };
+		4C2CA0351751C1D40066B379 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C2CA0371751C1D80066B379 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2CA0381751C1D80066B379 /* CoreImage.framework in Frameworks */,
+				4C2CA0361751C1D40066B379 /* QuartzCore.framework in Frameworks */,
 				4C2CA0081751BA150066B379 /* UIKit.framework in Frameworks */,
 				4C2CA00A1751BA150066B379 /* Foundation.framework in Frameworks */,
 				4C2CA00C1751BA150066B379 /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +70,8 @@
 		4C2C9FFB1751BA150066B379 = {
 			isa = PBXGroup;
 			children = (
+				4C2CA0371751C1D80066B379 /* CoreImage.framework */,
+				4C2CA0351751C1D40066B379 /* QuartzCore.framework */,
 				4C2CA00D1751BA150066B379 /* FaceSloth */,
 				4C2CA0061751BA150066B379 /* Frameworks */,
 				4C2CA0051751BA150066B379 /* Products */,

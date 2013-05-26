@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Tim Gostony. All rights reserved.
 //
 
+#import <CoreImage/CoreImage.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import "TGSlothRenderer.h"
 
 @implementation TGSlothRenderer
