@@ -23,6 +23,12 @@
 		4C2CA0341751BF1C0066B379 /* TGSlothRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */; };
 		4C2CA0361751C1D40066B379 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0351751C1D40066B379 /* QuartzCore.framework */; };
 		4C2CA0381751C1D80066B379 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0371751C1D80066B379 /* CoreImage.framework */; };
+		4C2CA03A1751C65B0066B379 /* slothface1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0391751C65B0066B379 /* slothface1.png */; };
+		4C2CA0411751C7480066B379 /* slothface6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03C1751C7480066B379 /* slothface6.png */; };
+		4C2CA0421751C7480066B379 /* slothface5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03D1751C7480066B379 /* slothface5.png */; };
+		4C2CA0431751C7480066B379 /* slothface4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03E1751C7480066B379 /* slothface4.png */; };
+		4C2CA0441751C7480066B379 /* slothface3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03F1751C7480066B379 /* slothface3.png */; };
+		4C2CA0451751C7480066B379 /* slothface2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0401751C7480066B379 /* slothface2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,12 @@
 		4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSlothRenderer.m; sourceTree = "<group>"; };
 		4C2CA0351751C1D40066B379 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C2CA0371751C1D80066B379 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4C2CA0391751C65B0066B379 /* slothface1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface1.png; sourceTree = "<group>"; };
+		4C2CA03C1751C7480066B379 /* slothface6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface6.png; sourceTree = "<group>"; };
+		4C2CA03D1751C7480066B379 /* slothface5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface5.png; sourceTree = "<group>"; };
+		4C2CA03E1751C7480066B379 /* slothface4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface4.png; sourceTree = "<group>"; };
+		4C2CA03F1751C7480066B379 /* slothface3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface3.png; sourceTree = "<group>"; };
+		4C2CA0401751C7480066B379 /* slothface2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,7 @@
 				4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */,
 				4C2CA0321751BF1C0066B379 /* TGSlothRenderer.h */,
 				4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */,
+				4C2CA03B1751C65F0066B379 /* Sloth Faces */,
 			);
 			path = FaceSloth;
 			sourceTree = "<group>";
@@ -126,6 +139,19 @@
 				4C2CA01D1751BA150066B379 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C2CA03B1751C65F0066B379 /* Sloth Faces */ = {
+			isa = PBXGroup;
+			children = (
+				4C2CA0391751C65B0066B379 /* slothface1.png */,
+				4C2CA03C1751C7480066B379 /* slothface6.png */,
+				4C2CA03D1751C7480066B379 /* slothface5.png */,
+				4C2CA03E1751C7480066B379 /* slothface4.png */,
+				4C2CA03F1751C7480066B379 /* slothface3.png */,
+				4C2CA0401751C7480066B379 /* slothface2.png */,
+			);
+			name = "Sloth Faces";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +212,12 @@
 				4C2CA01E1751BA150066B379 /* Default-568h@2x.png in Resources */,
 				4C2CA0241751BA150066B379 /* TGViewController.xib in Resources */,
 				4C2CA0311751BDBE0066B379 /* TGImageViewerViewController.xib in Resources */,
+				4C2CA03A1751C65B0066B379 /* slothface1.png in Resources */,
+				4C2CA0411751C7480066B379 /* slothface6.png in Resources */,
+				4C2CA0421751C7480066B379 /* slothface5.png in Resources */,
+				4C2CA0431751C7480066B379 /* slothface4.png in Resources */,
+				4C2CA0441751C7480066B379 /* slothface3.png in Resources */,
+				4C2CA0451751C7480066B379 /* slothface2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
