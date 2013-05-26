@@ -41,8 +41,21 @@
     
     for(CIFaceFeature* feature in features)
     {
+        float rotation = 0.0f; // 25 degrees
+        
+        if(feature.hasLeftEyePosition && feature.hasRightEyePosition)
+        {
+            float deltaY = feature.rightEyePosition.y - feature.leftEyePosition.y;
+            float deltaX = feature.rightEyePosition.x - feature.leftEyePosition.x;
+            rotation = atan2(deltaY, deltaX) * 180 / M_PI;
+        }
+        
+        
         CGRect rect = feature.bounds;
-        [self drawSlothInContext:context inRect:rect];
+        
+        
+        
+        [self drawSlothInContext:context inRect:rect rotation:rotation];
     }
     
     // write out finished image
@@ -57,15 +70,43 @@
     
 }
 
--(void)drawSlothInContext:(CGContextRef)context inRect:(CGRect)rect
+float deg2rad(float deg)
+{
+    return deg * M_PI / 180.0f;
+}
+
+-(void)drawSlothInContext:(CGContextRef)context inRect:(CGRect)rect rotation:(float)rotation
 {
     NSLog(@"Drawing sloth at %@",NSStringFromCGRect(rect));
+    
+    
+    CGSize size = CGContextGetClipBoundingBox(context).size;
     
     int imageid = 1+(arc4random()%7);
     
     UIImage* slothFace = [UIImage imageNamed:[NSString stringWithFormat:@"slothface%d",imageid]];
     
+    CGAffineTransform transform = CGAffineTransformIdentity;
+
+    transform = CGAffineTransformRotate(transform, deg2rad(rotation));
+    
+    //translate context
+    CGContextTranslateCTM( context, 0.5f * size.width, 0.5f * size.height ) ;
+    
+    // rotate context
+    CGContextConcatCTM(context, transform);
+
+    rect.origin.x -= size.width * 0.5f;
+    rect.origin.y -= size.height * 0.5f;
+    
+    
     CGContextDrawImage(context, rect, slothFace.CGImage);
+    
+    // unrotate context 
+    CGContextConcatCTM(context, CGAffineTransformRotate(CGAffineTransformIdentity, -deg2rad((rotation))));
+    // untranslate
+    CGContextTranslateCTM( context, -0.5f * size.width, -0.5f * size.height ) ;
+
     
     
 }
