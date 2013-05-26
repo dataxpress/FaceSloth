@@ -18,9 +18,23 @@
     
     // main thread.
     
+    CIImage* ciimage = [CIImage imageWithCGImage:image.CGImage];
     
+    CIDetector* detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
     
+    NSArray* features = [detector featuresInImage:ciimage];
+
     
+    if(features.count == 0)
+    {
+        errorHandler(@"Couldn't find any faces.  Try again with a picture at a better angle and/or with better lighting.");
+        return;
+    }
+    
+    for(CIFaceFeature* feature in features)
+    {
+        
+    }
     
     
     
