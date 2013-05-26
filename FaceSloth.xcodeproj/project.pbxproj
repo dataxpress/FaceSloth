@@ -20,6 +20,7 @@
 		4C2CA0241751BA150066B379 /* TGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0221751BA150066B379 /* TGViewController.xib */; };
 		4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */; };
 		4C2CA0311751BDBE0066B379 /* TGImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */; };
+		4C2CA0341751BF1C0066B379 /* TGSlothRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		4C2CA02D1751BDBE0066B379 /* TGImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageViewerViewController.h; sourceTree = "<group>"; };
 		4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageViewerViewController.m; sourceTree = "<group>"; };
 		4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGImageViewerViewController.xib; sourceTree = "<group>"; };
+		4C2CA0321751BF1C0066B379 /* TGSlothRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSlothRenderer.h; sourceTree = "<group>"; };
+		4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSlothRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				4C2CA02D1751BDBE0066B379 /* TGImageViewerViewController.h */,
 				4C2CA02E1751BDBE0066B379 /* TGImageViewerViewController.m */,
 				4C2CA02F1751BDBE0066B379 /* TGImageViewerViewController.xib */,
+				4C2CA0321751BF1C0066B379 /* TGSlothRenderer.h */,
+				4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */,
 			);
 			path = FaceSloth;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				4C2CA0181751BA150066B379 /* TGAppDelegate.m in Sources */,
 				4C2CA0211751BA150066B379 /* TGViewController.m in Sources */,
 				4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */,
+				4C2CA0341751BF1C0066B379 /* TGSlothRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

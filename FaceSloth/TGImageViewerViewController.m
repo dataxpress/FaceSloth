@@ -7,6 +7,7 @@
 //
 
 #import "TGImageViewerViewController.h"
+#import "TGSlothRenderer.h"
 
 @interface TGImageViewerViewController ()
 
@@ -28,9 +29,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    // load the image into the view
+    // render the image
+    TGSlothRenderer* renderer = [[TGSlothRenderer alloc] init];
     
-    self.imageView.image = self.image;
+    [renderer renderSlothFacesOntoImage:self.image completion:^(UIImage *renderedImage) {
+        self.imageView.image = renderedImage;
+    } error:^(NSString *error) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [[[[UIAlertView alloc] initWithTitle:@"Error" message:error delegate:nil cancelButtonTitle:@"Oh..." otherButtonTitles:nil] autorelease] show];
+        
+    }];
+    
+    [renderer release];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +53,7 @@
 
 -(void)dealloc
 {
+    [_renderedImage release];
     [_imageView release];
     [_image release];
     [super dealloc];
