@@ -31,14 +31,24 @@
         return;
     }
     
+    CGSize imageSize = image.size;
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(nil, imageSize.width, imageSize.height, CGImageGetBitsPerComponent(image.CGImage), 0, rgbColorSpace, CGImageGetBitmapInfo(image.CGImage));
+    CGColorSpaceRelease(rgbColorSpace);
+
+    
     for(CIFaceFeature* feature in features)
     {
-        
+        CGRect rect = feature.bounds;
+        [self drawSlothInContext:context inRect:rect];
     }
-    
-    
-    
-    
 }
+
+-(void)drawSlothInContext:(CGContextRef)context inRect:(CGRect)rect
+{
+    NSLog(@"Drawing sloth at %@",NSStringFromCGRect(rect));
+}
+
+
 
 @end
