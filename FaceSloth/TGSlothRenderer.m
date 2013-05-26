@@ -35,6 +35,8 @@
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(nil, imageSize.width, imageSize.height, CGImageGetBitsPerComponent(image.CGImage), 0, rgbColorSpace, CGImageGetBitmapInfo(image.CGImage));
     CGColorSpaceRelease(rgbColorSpace);
+    
+    CGContextDrawImage(context, CGRectMake(0, 0, imageSize.width, imageSize.height), image.CGImage);
 
     
     for(CIFaceFeature* feature in features)
@@ -42,11 +44,30 @@
         CGRect rect = feature.bounds;
         [self drawSlothInContext:context inRect:rect];
     }
+    
+    // write out finished image
+    CGImageRef imgRef = CGBitmapContextCreateImage(context);
+    UIImage* img = [UIImage imageWithCGImage:imgRef];
+    CGImageRelease(imgRef);
+
+    handler(img);
+    
+    
+    CGContextRelease(context);
+    
 }
 
 -(void)drawSlothInContext:(CGContextRef)context inRect:(CGRect)rect
 {
     NSLog(@"Drawing sloth at %@",NSStringFromCGRect(rect));
+    
+    int imageid = 1+(arc4random()%6);
+    
+    UIImage* slothFace = [UIImage imageNamed:[NSString stringWithFormat:@"slothface%d",imageid]];
+    
+    CGContextDrawImage(context, rect, slothFace.CGImage);
+    
+    
 }
 
 
