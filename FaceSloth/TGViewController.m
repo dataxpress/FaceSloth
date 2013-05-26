@@ -7,6 +7,7 @@
 //
 
 #import "TGViewController.h"
+#import "TGImageViewerViewController.h"
 
 @interface TGViewController ()
 
@@ -62,11 +63,22 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        
+        TGImageViewerViewController* viewer = [[TGImageViewerViewController alloc] initWithNibName:nil bundle:nil];
+        
+        viewer.image = image;
+        [self presentViewController:viewer animated:YES completion:nil];
+        
+        [viewer release];
     
-    NSLog(@"Info is %@",info);
-    
+     }];
+     
 }
+
+
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:YES completion:nil];
