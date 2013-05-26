@@ -61,7 +61,7 @@
 {
     NSLog(@"Drawing sloth at %@",NSStringFromCGRect(rect));
     
-    int imageid = 1+(arc4random()%6);
+    int imageid = 1+(arc4random()%7);
     
     UIImage* slothFace = [UIImage imageNamed:[NSString stringWithFormat:@"slothface%d",imageid]];
     

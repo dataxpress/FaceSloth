@@ -29,6 +29,7 @@
 		4C2CA0431751C7480066B379 /* slothface4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03E1751C7480066B379 /* slothface4.png */; };
 		4C2CA0441751C7480066B379 /* slothface3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA03F1751C7480066B379 /* slothface3.png */; };
 		4C2CA0451751C7480066B379 /* slothface2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0401751C7480066B379 /* slothface2.png */; };
+		4C2CA0471751C8DD0066B379 /* slothface7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0461751C8DD0066B379 /* slothface7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		4C2CA03E1751C7480066B379 /* slothface4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface4.png; sourceTree = "<group>"; };
 		4C2CA03F1751C7480066B379 /* slothface3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface3.png; sourceTree = "<group>"; };
 		4C2CA0401751C7480066B379 /* slothface2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface2.png; sourceTree = "<group>"; };
+		4C2CA0461751C8DD0066B379 /* slothface7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface7.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				4C2CA03E1751C7480066B379 /* slothface4.png */,
 				4C2CA03F1751C7480066B379 /* slothface3.png */,
 				4C2CA0401751C7480066B379 /* slothface2.png */,
+				4C2CA0461751C8DD0066B379 /* slothface7.png */,
 			);
 			name = "Sloth Faces";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				4C2CA0431751C7480066B379 /* slothface4.png in Resources */,
 				4C2CA0441751C7480066B379 /* slothface3.png in Resources */,
 				4C2CA0451751C7480066B379 /* slothface2.png in Resources */,
+				4C2CA0471751C8DD0066B379 /* slothface7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
