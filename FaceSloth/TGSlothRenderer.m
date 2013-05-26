@@ -86,18 +86,24 @@ float deg2rad(float deg)
     
     UIImage* slothFace = [UIImage imageNamed:[NSString stringWithFormat:@"slothface%d",imageid]];
     
+    
+    CGPoint facePosition = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+    
+    float xpos = facePosition.x / size.width;
+    float ypos = facePosition.y / size.height;
+    
     CGAffineTransform transform = CGAffineTransformIdentity;
 
     transform = CGAffineTransformRotate(transform, deg2rad(rotation));
     
     //translate context
-    CGContextTranslateCTM( context, 0.5f * size.width, 0.5f * size.height ) ;
+    CGContextTranslateCTM( context, xpos * size.width, ypos * size.height ) ;
     
     // rotate context
     CGContextConcatCTM(context, transform);
 
-    rect.origin.x -= size.width * 0.5f;
-    rect.origin.y -= size.height * 0.5f;
+    rect.origin.x = -rect.size.width / 2;
+    rect.origin.y = -rect.size.height / 2;
     
     
     CGContextDrawImage(context, rect, slothFace.CGImage);
@@ -105,7 +111,7 @@ float deg2rad(float deg)
     // unrotate context 
     CGContextConcatCTM(context, CGAffineTransformRotate(CGAffineTransformIdentity, -deg2rad((rotation))));
     // untranslate
-    CGContextTranslateCTM( context, -0.5f * size.width, -0.5f * size.height ) ;
+    CGContextTranslateCTM( context, -xpos * size.width, -ypos * size.height ) ;
 
     
     
