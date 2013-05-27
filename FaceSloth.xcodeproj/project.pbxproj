@@ -32,6 +32,7 @@
 		4C2CA0471751C8DD0066B379 /* slothface7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2CA0461751C8DD0066B379 /* slothface7.png */; };
 		4C2CA0491751D2DD0066B379 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0481751D2DD0066B379 /* Social.framework */; };
 		4C2CA04B1751D2F80066B379 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA04A1751D2F80066B379 /* Twitter.framework */; };
+		4C2CA04E1752697E0066B379 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA04D1752697E0066B379 /* UIImage+FixOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		4C2CA0461751C8DD0066B379 /* slothface7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slothface7.png; sourceTree = "<group>"; };
 		4C2CA0481751D2DD0066B379 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4C2CA04A1751D2F80066B379 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4C2CA04C1752697E0066B379 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		4C2CA04D1752697E0066B379 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				4C2CA0321751BF1C0066B379 /* TGSlothRenderer.h */,
 				4C2CA0331751BF1C0066B379 /* TGSlothRenderer.m */,
 				4C2CA03B1751C65F0066B379 /* Sloth Faces */,
+				4C2CA04C1752697E0066B379 /* UIImage+FixOrientation.h */,
+				4C2CA04D1752697E0066B379 /* UIImage+FixOrientation.m */,
 			);
 			path = FaceSloth;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				4C2CA0211751BA150066B379 /* TGViewController.m in Sources */,
 				4C2CA0301751BDBE0066B379 /* TGImageViewerViewController.m in Sources */,
 				4C2CA0341751BF1C0066B379 /* TGSlothRenderer.m in Sources */,
+				4C2CA04E1752697E0066B379 /* UIImage+FixOrientation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

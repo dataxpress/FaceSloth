@@ -9,6 +9,7 @@
 #import "TGImageViewerViewController.h"
 #import "TGSlothRenderer.h"
 #import <Twitter/Twitter.h>
+#import "UIImage+FixOrientation.h"
 
 @interface TGImageViewerViewController ()
 
@@ -43,7 +44,7 @@
 -(void)renderFacesOnImage:(UIImage*)image
 {
     
-    self.originalImage = image;
+    self.originalImage = [image fixedOrientation];
     
     [self renderOriginal];
 

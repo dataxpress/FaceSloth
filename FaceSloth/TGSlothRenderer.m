@@ -11,18 +11,20 @@
 
 #import "TGSlothRenderer.h"
 
+#import "UIImage+FixOrientation.h"
+
 @implementation TGSlothRenderer
 
 -(void)renderSlothFacesOntoImage:(UIImage *)image completion:(void (^)(UIImage *))handler error:(void (^)(NSString *))errorHandler
 {
     
-    // main thread.
-    
+    // main thread.    
     CIImage* ciimage = [CIImage imageWithCGImage:image.CGImage];
     
     CIDetector* detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
     
     NSArray* features = [detector featuresInImage:ciimage];
+    
 
     
     if(features.count == 0)
@@ -30,14 +32,8 @@
         errorHandler(@"Couldn't find any faces.  Try again with a picture at a better angle and/or with better lighting.");
         return;
     }
-    
-    CGSize imageSize = image.size;
-    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(nil, imageSize.width, imageSize.height, CGImageGetBitsPerComponent(image.CGImage), 0, rgbColorSpace, CGImageGetBitmapInfo(image.CGImage));
-    CGColorSpaceRelease(rgbColorSpace);
-    
-    CGContextDrawImage(context, CGRectMake(0, 0, imageSize.width, imageSize.height), image.CGImage);
-
+        
+    CGContextRef context = [self createContextWithImage:image];
     
     for(CIFaceFeature* feature in features)
     {
@@ -115,6 +111,33 @@ float deg2rad(float deg)
 
     
     
+}
+
+static inline double radians (double degrees) {return degrees * M_PI/180;}
+
+-(CGContextRef)createContextWithImage:(UIImage*)image
+{
+    CGSize targetSize = image.size;
+	CGFloat targetWidth = targetSize.width;
+	CGFloat targetHeight = targetSize.height;
+    
+    
+	CGImageRef imageRef = [image CGImage];
+	CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
+	CGColorSpaceRef colorSpaceInfo = CGImageGetColorSpace(imageRef);
+    
+	if (bitmapInfo == kCGImageAlphaNone) {
+		bitmapInfo = kCGImageAlphaNoneSkipLast;
+	}
+    
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
+        
+    
+    
+    
+    CGContextDrawImage(bitmap, CGRectMake(0, 0, targetWidth, targetHeight), imageRef);
+    
+	return bitmap;
 }
 
 
