@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C2CA0031751BA150066B379 /* FaceSloth */ = {
+		4C2CA0031751BA150066B379 /* slothify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C2CA0271751BA150066B379 /* Build configuration list for PBXNativeTarget "FaceSloth" */;
+			buildConfigurationList = 4C2CA0271751BA150066B379 /* Build configuration list for PBXNativeTarget "slothify" */;
 			buildPhases = (
 				4C2CA0001751BA150066B379 /* Sources */,
 				4C2CA0011751BA150066B379 /* Frameworks */,
@@ -199,7 +199,7 @@
 			);
 			dependencies = (
 			);
-			name = FaceSloth;
+			name = slothify;
 			productName = FaceSloth;
 			productReference = 4C2CA0041751BA150066B379 /* FaceSloth.app */;
 			productType = "com.apple.product-type.application";
@@ -226,7 +226,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C2CA0031751BA150066B379 /* FaceSloth */,
+				4C2CA0031751BA150066B379 /* slothify */,
 			);
 		};
 /* End PBXProject section */
@@ -382,7 +382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C2CA0271751BA150066B379 /* Build configuration list for PBXNativeTarget "FaceSloth" */ = {
+		4C2CA0271751BA150066B379 /* Build configuration list for PBXNativeTarget "slothify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C2CA0281751BA150066B379 /* Debug */,
