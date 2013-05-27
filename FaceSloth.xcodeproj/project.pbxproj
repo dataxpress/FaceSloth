@@ -33,6 +33,8 @@
 		4C2CA0491751D2DD0066B379 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA0481751D2DD0066B379 /* Social.framework */; };
 		4C2CA04B1751D2F80066B379 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CA04A1751D2F80066B379 /* Twitter.framework */; };
 		4C2CA04E1752697E0066B379 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CA04D1752697E0066B379 /* UIImage+FixOrientation.m */; };
+		4CDFC3ED1752EA5B002FD14E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CDFC3EC1752EA5B002FD14E /* icon@2x.png */; };
+		4CDFC3EF1752EA5D002FD14E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CDFC3EE1752EA5D002FD14E /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		4C2CA04A1751D2F80066B379 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		4C2CA04C1752697E0066B379 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		4C2CA04D1752697E0066B379 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		4CDFC3EC1752EA5B002FD14E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		4CDFC3EE1752EA5D002FD14E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		4C2CA00D1751BA150066B379 /* FaceSloth */ = {
 			isa = PBXGroup;
 			children = (
+				4CDFC3F01752EA62002FD14E /* Icons */,
 				4C2CA0161751BA150066B379 /* TGAppDelegate.h */,
 				4C2CA0171751BA150066B379 /* TGAppDelegate.m */,
 				4C2CA01F1751BA150066B379 /* TGViewController.h */,
@@ -168,6 +173,15 @@
 				4C2CA0461751C8DD0066B379 /* slothface7.png */,
 			);
 			name = "Sloth Faces";
+			sourceTree = "<group>";
+		};
+		4CDFC3F01752EA62002FD14E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				4CDFC3EE1752EA5D002FD14E /* icon.png */,
+				4CDFC3EC1752EA5B002FD14E /* icon@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,8 @@
 				4C2CA0441751C7480066B379 /* slothface3.png in Resources */,
 				4C2CA0451751C7480066B379 /* slothface2.png in Resources */,
 				4C2CA0471751C8DD0066B379 /* slothface7.png in Resources */,
+				4CDFC3ED1752EA5B002FD14E /* icon@2x.png in Resources */,
+				4CDFC3EF1752EA5D002FD14E /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +389,7 @@
 				4C2CA0291751BA150066B379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
