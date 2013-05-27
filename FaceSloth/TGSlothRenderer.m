@@ -49,6 +49,13 @@
         
         CGRect rect = feature.bounds;
         
+        float scaleFactor = 0.10f;
+        
+        rect.size.width *= 1.0f + scaleFactor;
+        rect.size.height *= 1.0f + scaleFactor;
+        rect.origin.x -= 0.5 * scaleFactor * rect.size.width;
+        rect.origin.y -= 0.5 * scaleFactor * rect.size.height;
+        
         
         
         [self drawSlothInContext:context inRect:rect rotation:rotation];
